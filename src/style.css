@@ -1,0 +1,47 @@
+@import "tailwindcss";
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: #2563eb;
+  }
+
+  .bg-secondary {
+    background-color: #22C55E;
+  }
+
+  .bg-tertiary {
+    background-color: #8B5CF6;
+  }
+
+  .text-primary {
+    color: #2563eb;
+  }
+
+  .text-secondary {
+    color: #22C55E;
+  }
+
+  .text-tertiary {
+    color: #8B5CF6;
+  }
+
+  .border-primary {
+    border-color: #2563eb;
+  }
+
+  .border-secondary {
+    border-color: #22C55E;
+  }
+
+  .border-tertiary {
+    border-color: #8B5CF6;
+  }
+}
