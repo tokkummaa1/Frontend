@@ -57,7 +57,7 @@ const handleSubmit = async () => {
   successMessage.value = '';
 
   try {
-    await axios.post('http://localhost:8000/api/v1/users/reset_password/', {
+    await axios.post('https://backend-12wd.onrender.com/api/v1/users/reset_password/', {
       email: email.value
     });
 

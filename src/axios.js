@@ -2,10 +2,10 @@ import axios from "axios";
 import { useAuthStore } from "@/store/authStore";
 
 const api = axios.create({
-  baseURL: "http://localhost:8000/",
+  baseURL: "https://backend-12wd.onrender.com/",
   headers: {
     "Content-Type": "application/json",
-  }
+  },
 });
 
 // Add request interceptor to include token
