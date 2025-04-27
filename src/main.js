@@ -6,12 +6,17 @@ import router from "./router";
 import "./style.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+
 if (typeof window !== "undefined") {
-  Object.defineProperty(window, "ethereum", {
-    configurable: true,
-    writable: true,
-    value: undefined,
-  });
+  const ethereumDescriptor = Object.getOwnPropertyDescriptor(window, 'ethereum');
+  // Only redefine if it doesn't exist or is configurable
+  if (!ethereumDescriptor || ethereumDescriptor.configurable) {
+    Object.defineProperty(window, "ethereum", {
+      configurable: true,
+      writable: true,
+      value: undefined,
+    });
+  }
 }
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
